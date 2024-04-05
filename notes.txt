@@ -1,0 +1,82 @@
+zip -r autoblogger-web.zip frontend backend \
+    -x "*.git" \
+    -x "*.pyc" \
+    -x "*.db" \
+    -x "*.sublime-*" \
+    -x "*__pycache__*" \
+    -x "*node_modules*" \
+    -x "*.venv*" \
+    -x "*raw*" \
+    -x "*output*"
+
+
+
+
+Generate a fortran code example for this Fixed format. Fixed format was born in 1950's, when each line of code was punched on a paper card (punched card). In
+fixed source form, a source line has columns divided into fields for statement labels, continuation indicators,
+statement text, and sequence numbers. Each column represents a single character.
+
+The column positions for each field follow:
+
+Field                   |  Column
+-----                   |  -------
+Statement label         |  1 through 5 
+Continuation indicator  |  6 
+Statement               |  7 through 72 (or 132 with compiler option extend-source) 
+Sequence number         |  73 through 80 
+
+
+
+
+
+main                                                                    1000
+C    This is a fortan progam that outputs
+     &Hello World to the console
+
+     print *, Hello World'
+
+
+
+1. (green) Statement label is a label given to some statement usually the program name. It must appear in columns 1-5
+
+2. (red) The continuation indicator (&) is used when wrapping the previous line to a newline. It should alway be in column 6 in fixed format code
+
+3. (blue) A Statement is the actual line of code. It's column range is 7 to 72
+
+4. (yellow) An optional sequence number may be present in column 73 to 80. The program starts its execution from the statement with the lowest sequence number
+
+
+
+
+
+
+C   This is fixed form 
+C   Swap x and y 
+      temp = x
+      x = y
+      y = temp
+C   Print x and y 
+      write(6,*) 'x and y are =',
+    *             x,y
+
+
+main      1000
+C     This is a simple Fortran program with a sequence number
+     &to print the Fibonacci sequence up to 10 terms.
+      implicit none
+      integer :: i, n, fibonacci(10)
+
+      fibonacci(1) = 0
+      fibonacci(2) = 1
+      do i = 3, 10
+         fibonacci(i) = fibonacci(i-1) + fibonacci(i-2)
+      end do
+
+      print *, 'Fibonacci Sequence:'
+      do i = 1, 10
+         print *, 'Term ', i, ': ', fibonacci(i)
+      end do
+
+      end program main
+
+
